@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-3 mb-4">
                             <img
-                                src="/logo.jpeg"
+                                src="/logo.png"
                                 alt="KEREMEHAS Logo"
                                 className="h-16 w-auto object-contain bg-white rounded-lg p-1"
                             />

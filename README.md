@@ -1,73 +1,157 @@
-# React + TypeScript + Vite
+# KEREMEHAS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A Special Home for Women with Disabilities**
 
-Currently, two official plugins are available:
+Official website for KEREMEHAS – CSI Ann's Centre, a residential rehabilitation centre dedicated to the care, protection, and empowerment of mentally and physically challenged adult women.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📖 About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+KEREMEHAS is a social service initiative of the **Church of South India, Coimbatore Diocese**, established in 1996 by the Women's Fellowship. The organization provides comprehensive care, vocational training, and holistic development programs for women with disabilities.
 
-## Expanding the ESLint configuration
+### Our Mission
+- Provide safe and permanent shelter
+- Offer rehabilitation through vocational training
+- Promote independence and self-reliance
+- Extend Christ's love and compassionate service
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion & GSAP
+- **Icons**: Lucide React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd Kerenmehas
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:3000`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The production-ready files will be in the `dist` folder.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## 📂 Project Structure
+
+```
+Kerenmehas/
+├── public/              # Static assets
+│   ├── logo.png        # Organization logo
+│   ├── favicon files   # Favicon in multiple sizes
+│   └── site.webmanifest
+├── src/
+│   ├── components/     # React components
+│   │   ├── ui/        # Reusable UI components
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Vision.tsx
+│   │   ├── Mission.tsx
+│   │   ├── Objectives.tsx
+│   │   ├── Impact.tsx
+│   │   ├── Rehabilitation.tsx
+│   │   ├── Support.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── lib/           # Utilities and animations
+│   ├── App.tsx        # Main app component
+│   ├── main.tsx       # Entry point
+│   └── index.css      # Global styles
+├── index.html
+├── tailwind.config.js
+├── vite.config.ts
+└── package.json
+```
+
+---
+
+## 🎨 Design System
+
+### Brand Colors
+- **Primary Blue**: `#0F5E8C` - Main headings, buttons, icons
+- **Deep Navy**: `#0B2F4A` - Footer, overlays, dark sections
+- **Soft Sky Blue**: `#5FB3D9` - Borders, backgrounds, hover states
+- **Compassion Red**: `#E5392D` - Accent highlights (limited use)
+- **Hope Yellow**: `#F6C21C` - CTAs, badges, emphasis
+
+### Typography
+- Headings: Brand Primary Blue
+- Body Text: `#1F2933`
+- Muted Text: `#6B7280`
+
+---
+
+## 📱 Features
+
+- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ Smooth scroll animations with Framer Motion
+- ✅ Parallax effects with GSAP
+- ✅ Interactive Google Maps integration
+- ✅ Professional section numbering and labels
+- ✅ Accessible color system (WCAG compliant)
+- ✅ PWA-ready with web manifest
+- ✅ SEO optimized
+
+---
+
+## 📞 Contact
+
+**KEREMEHAS – CSI Ann's Centre**
+
+📍 1077, Avinashi Road, Coimbatore – 641 018, Tamil Nadu, India
+
+---
+
+## 📄 License
+
+© 2026 KEREMEHAS – CSI Ann's Centre. All rights reserved.
+
+---
+
+## 🤝 Contributing
+
+This is the official website for KEREMEHAS. For inquiries about contributing or supporting our mission, please contact us directly.
+
+---
+
+**Built with ❤️ for empowering lives through compassionate care**

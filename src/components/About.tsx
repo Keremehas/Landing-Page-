@@ -32,7 +32,7 @@ export default function About() {
                             <div className="relative mb-8">
                                 <div className="absolute -inset-4 bg-brand-soft/10 rounded-2xl blur-xl" />
                                 <img
-                                    src="/logo.jpeg"
+                                    src="/logo.png"
                                     alt="KEREMEHAS Logo"
                                     className="relative h-32 w-auto object-contain"
                                 />

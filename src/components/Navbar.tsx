@@ -62,7 +62,7 @@ export default function Navbar() {
                         className="flex items-center gap-3 hover:opacity-80 transition-opacity"
                     >
                         <img
-                            src="/logo.jpeg"
+                            src="/logo.png"
                             alt="KEREMEHAS Logo"
                             className="h-14 w-auto object-contain"
                         />

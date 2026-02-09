@@ -1,0 +1,22 @@
+{
+    "name": "KEREMEHAS - A Special Home for Women with Disabilities",
+    "short_name": "KEREMEHAS",
+    "description": "KEREMEHAS is a residential rehabilitation centre dedicated to the care, protection, and empowerment of women with disabilities. Established by CSI Coimbatore Diocese in 1996.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0F5E8C",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}
