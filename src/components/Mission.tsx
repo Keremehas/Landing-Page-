@@ -31,7 +31,7 @@ const missions = [
 
 export default function Mission() {
     return (
-        <section id="mission" className="py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
+        <section id="mission" className="section-spacing bg-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-accent-yellow/5 rounded-full blur-3xl" />
 
@@ -47,7 +47,7 @@ export default function Mission() {
 
                 <div className="max-w-6xl mx-auto">
                     {/* Desktop: Grid with connecting lines */}
-                    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative">
+                    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
                         {/* Connecting Line */}
                         <div className="absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-soft/30 to-transparent hidden lg:block" />
 

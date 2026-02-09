@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { scaleIn } from "@/lib/animations";
+import { fadeInUpGentle } from "@/lib/animations";
 import { Button } from "@/components/ui/button";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { HeartHandshake, DollarSign, Gift, Users } from "lucide-react";
@@ -27,7 +27,7 @@ const contributionMethods = [
 
 export default function Support() {
     return (
-        <section id="support" className="py-16 md:py-20 bg-white relative overflow-hidden">
+        <section id="support" className="section-spacing bg-white relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-yellow/5 rounded-full blur-3xl" />
@@ -50,7 +50,7 @@ export default function Support() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        variants={scaleIn}
+                        variants={fadeInUpGentle}
                         className="bg-gradient-to-br from-brand-dark via-brand to-brand-soft p-10 md:p-16 rounded-3xl shadow-2xl mb-12 relative overflow-hidden"
                     >
                         {/* Decorative Elements */}
@@ -72,7 +72,7 @@ export default function Support() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button
                                     size="lg"
-                                    className="bg-accent-yellow text-brand-dark hover:bg-accent-yellow/90 text-lg px-10 py-7 rounded-full font-bold transition-colors shadow-xl"
+                                    className="bg-accent-yellow text-brand-dark hover:bg-accent-yellow/90 text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full font-bold transition-colors shadow-xl"
                                     onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                                 >
                                     Get in Touch
@@ -80,7 +80,7 @@ export default function Support() {
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="border-2 border-white text-white bg-transparent hover:bg-white/10 text-lg px-10 py-7 rounded-full font-semibold transition-colors"
+                                    className="border-2 border-white text-white bg-transparent hover:bg-white/10 text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full font-semibold transition-colors"
                                     onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
                                 >
                                     Learn More

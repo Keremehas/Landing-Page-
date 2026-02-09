@@ -37,7 +37,7 @@ const categories = [
 
 export default function Rehabilitation() {
     return (
-        <section id="rehabilitation" className="py-16 md:py-20 bg-surface relative overflow-hidden">
+        <section id="rehabilitation" className="section-spacing bg-surface relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent-yellow/5 rounded-full blur-3xl" />
 

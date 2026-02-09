@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { scaleIn } from "@/lib/animations";
+import { fadeInUpGentle } from "@/lib/animations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { Users, Heart, Award, TrendingUp, Home, Sparkles } from "lucide-react";
@@ -51,7 +51,7 @@ const stats = [
 
 export default function Impact() {
     return (
-        <section id="impact" className="py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
+        <section id="impact" className="section-spacing bg-white relative overflow-hidden">
             {/* Background Pattern - Smaller on mobile */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-10 left-10 md:top-20 md:left-20 w-24 h-24 md:w-32 md:h-32 border border-brand md:border-2 rounded-full" />
@@ -68,11 +68,11 @@ export default function Impact() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
-                            variants={scaleIn}
+                            variants={fadeInUpGentle}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}

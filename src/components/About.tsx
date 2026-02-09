@@ -20,7 +20,7 @@ export default function About() {
                 <div className="max-w-6xl mx-auto">
                     <SectionLabel number="01" label="About Us" className="justify-center" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Logo and Timeline */}
                         <motion.div
                             initial="hidden"
