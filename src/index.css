@@ -87,5 +87,14 @@
 
   body {
     @apply bg-white text-text-main antialiased;
+    font-size: 15px;
+    /* Reduced from default 16px */
+  }
+
+  /* Optimize for mobile */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
   }
 }

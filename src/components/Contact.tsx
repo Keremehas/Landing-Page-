@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import SectionLabel from "@/components/ui/SectionLabel";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 md:py-32 bg-brand-dark text-white relative overflow-hidden">
+        <section id="contact" className="py-16 md:py-20 bg-brand-dark text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-20 w-64 h-64 border-2 border-white rounded-full" />
@@ -16,7 +16,7 @@ export default function Contact() {
                 <SectionLabel number="08" label="Contact Us" className="justify-center" />
 
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <div className="h-px w-16 bg-accent-yellow" />
                         <div className="w-2 h-2 rounded-full bg-accent-yellow" />

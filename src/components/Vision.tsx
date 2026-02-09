@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 
 export default function Vision() {
     return (
-        <section id="vision" className="py-24 md:py-32 bg-surface relative overflow-hidden">
+        <section id="vision" className="py-16 md:py-20 bg-surface relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-3xl" />
             <div className="absolute top-20 right-20 w-64 h-64 border-2 border-brand-soft/20 rounded-full" />
@@ -15,7 +15,7 @@ export default function Vision() {
                 <SectionLabel number="02" label="Our Vision" className="justify-center" />
 
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-brand">Our Vision</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-brand">Our Vision</h2>
                 </div>
 
                 <motion.div
@@ -38,7 +38,7 @@ export default function Vision() {
                             {/* Opening Quote Mark */}
                             <div className="text-8xl md:text-9xl text-brand/10 font-serif leading-none mb-4">"</div>
 
-                            <p className="text-2xl md:text-3xl font-serif italic text-text-main leading-relaxed text-center mb-8">
+                            <p className="text-xl md:text-2xl font-serif italic text-text-main leading-relaxed text-center mb-8">
                                 To uphold human dignity by providing care, protection,
                                 rehabilitation, and sustainable livelihood opportunities for
                                 women with disabilities.

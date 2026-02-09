@@ -28,7 +28,7 @@ const missionItems = [
 
 export default function Mission() {
     return (
-        <section id="mission" className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <section id="mission" className="py-16 md:py-20 bg-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent-yellow/5 rounded-full blur-3xl" />
 
@@ -36,7 +36,7 @@ export default function Mission() {
                 <SectionLabel number="03" label="Our Mission" className="justify-center" />
 
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-brand mb-4">Our Mission</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">Our Mission</h2>
                     <p className="text-lg text-text-muted max-w-2xl mx-auto">
                         Four pillars that guide our commitment to transforming lives
                     </p>

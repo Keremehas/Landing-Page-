@@ -12,7 +12,7 @@ const highlights = [
 
 export default function About() {
     return (
-        <section id="about" className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <section id="about" className="py-16 md:py-20 bg-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-brand-soft/5 rounded-full blur-3xl" />
 
@@ -67,7 +67,7 @@ export default function About() {
                             variants={fadeInUp}
                             className="space-y-6"
                         >
-                            <h2 className="text-4xl md:text-5xl font-bold text-brand leading-tight">
+                            <h2 className="text-3xl md:text-4xl font-bold text-brand leading-tight">
                                 About Keremehas
                             </h2>
 

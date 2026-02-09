@@ -51,7 +51,7 @@ const stats = [
 
 export default function Impact() {
     return (
-        <section id="impact" className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <section id="impact" className="py-16 md:py-20 bg-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-20 w-32 h-32 border-2 border-brand rounded-full" />
@@ -63,7 +63,7 @@ export default function Impact() {
                 <SectionLabel number="05" label="Our Impact" className="justify-center" />
 
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-brand mb-4">Our Impact</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">Our Impact</h2>
                     <p className="text-lg text-text-muted max-w-2xl mx-auto">
                         Making a tangible difference in the lives of women who need it most
                     </p>

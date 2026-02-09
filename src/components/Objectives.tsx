@@ -12,7 +12,7 @@ const objectives = [
 
 export default function Objectives() {
     return (
-        <section id="objectives" className="py-24 md:py-32 bg-surface relative overflow-hidden">
+        <section id="objectives" className="py-16 md:py-20 bg-surface relative overflow-hidden">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-96 h-96 bg-brand-soft/5 rounded-full blur-3xl" />
 
@@ -20,7 +20,7 @@ export default function Objectives() {
                 <SectionLabel number="04" label="Aims & Objectives" className="justify-center" />
 
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-brand mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">
                         Aims & Objectives
                     </h2>
                     <p className="text-lg text-text-muted max-w-2xl mx-auto">
