@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* KEREMEHAS Official Brand Colors */
+    --brand-primary: #0F5E8C;
+    --brand-navy: #0B2F4A;
+    --brand-soft: #5FB3D9;
+    --brand-accent-red: #E5392D;
+    --brand-accent-yellow: #F6C21C;
+    --bg-soft: #F4F8FB;
+    --text-main: #1F2933;
+    --text-muted: #6B7280;
+
+    /* Shadcn mappings */
+    --background: 0 0% 100%;
+    --foreground: 210 17% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 17% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 13%;
+
+    --primary: 202 78% 31%;
+    /* Brand Blue #0F5E8C */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 206 100% 96%;
+    /* Soft surface */
+    --secondary-foreground: 202 78% 31%;
+
+    --muted: 206 100% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 44 94% 54%;
+    /* Hope Yellow #F6C21C */
+    --accent-foreground: 202 63% 16%;
+
+    --destructive: 5 78% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 206 50% 90%;
+    --input: 206 50% 90%;
+    --ring: 202 78% 31%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 202 63% 16%;
+    --foreground: 0 0% 100%;
+
+    --card: 202 63% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 202 63% 16%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 202 63% 16%;
+
+    --secondary: 202 50% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 202 50% 20%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 202 50% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 5 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 202 50% 20%;
+    --input: 202 50% 20%;
+    --ring: 206 100% 80%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-text-main antialiased;
+  }
+}
