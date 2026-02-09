@@ -39,41 +39,42 @@ export default function Hero() {
             id="home"
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
         >
-            {/* Background with Parallax and Pattern */}
+            {/* Background with Parallax */}
             <div
                 ref={bgRef}
                 className="absolute inset-0 z-0 h-[120%]"
             >
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/95 via-brand/90 to-brand-soft/85 z-10" />
-                {/* Decorative Pattern */}
-                <div className="absolute inset-0 z-10 opacity-10">
-                    <div className="absolute top-20 right-20 w-48 h-48 border-2 border-white rounded-full" />
-                    <div className="absolute bottom-32 left-32 w-32 h-32 border-2 border-white rounded-full" />
+                {/* Subtle decorative pattern - minimal on mobile */}
+                <div className="absolute inset-0 z-10 opacity-5 md:opacity-10">
+                    <div className="absolute top-10 right-10 md:top-20 md:right-20 w-32 h-32 md:w-40 md:h-40 border border-white rounded-full" />
+                    <div className="absolute bottom-20 left-20 w-24 h-24 md:w-32 md:h-32 border border-white rounded-full" />
                 </div>
                 <div className="absolute inset-0 bg-surface" />
             </div>
 
-            {/* Content */}
-            <div className="container relative z-20 px-4 py-20 md:py-24">
+            {/* Content - Mobile-first spacing */}
+            <div className="container-standard relative z-20 py-16 md:py-20">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={fadeInUp}
-                        className="text-center"
+                        className="text-center space-y-6 md:space-y-8"
                     >
                         {/* Subtitle */}
-                        <div className="mb-4">
-                            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-xs md:text-sm font-medium tracking-wide">
+                        <div>
+                            <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-xs md:text-sm font-medium tracking-wide">
                                 Church of South India – Coimbatore Diocese
                             </span>
                         </div>
 
-                        {/* Main Title with Gradient */}
+                        {/* Main Title - Mobile-optimized sizing */}
                         <h1
-                            className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight"
+                            className="font-bold tracking-tight leading-tight text-balance"
                             style={{
+                                fontSize: 'clamp(2.25rem, 4vw + 1rem, 3.75rem)',
                                 background: 'linear-gradient(90deg, #FFFFFF 0%, #5FB3D9 60%, #F6C21C 100%)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -84,27 +85,30 @@ export default function Hero() {
                         </h1>
 
                         {/* Tagline */}
-                        <p className="text-xl md:text-2xl font-light mb-4 text-white/95 max-w-2xl mx-auto leading-relaxed">
+                        <p
+                            className="font-light text-white/95 max-w-2xl mx-auto leading-relaxed text-balance"
+                            style={{ fontSize: 'clamp(1.125rem, 1.5vw + 0.5rem, 1.375rem)' }}
+                        >
                             A Special Home for Women with Disabilities
                         </p>
 
-                        {/* Decorative Line */}
-                        <div className="flex items-center justify-center gap-3 mb-8">
-                            <div className="h-px w-12 bg-accent-yellow" />
-                            <div className="w-2 h-2 rounded-full bg-accent-yellow" />
-                            <div className="h-px w-12 bg-accent-yellow" />
+                        {/* Decorative Line - Subtle */}
+                        <div className="flex items-center justify-center gap-2 md:gap-3">
+                            <div className="h-px w-8 md:w-12 bg-accent-yellow/60" />
+                            <div className="w-1.5 h-1.5 rounded-full bg-accent-yellow/60" />
+                            <div className="h-px w-8 md:w-12 bg-accent-yellow/60" />
                         </div>
 
                         {/* Mission Statement */}
-                        <p className="text-base md:text-lg text-white/80 mb-8 max-w-2xl mx-auto italic">
+                        <p className="text-sm md:text-base text-white/75 max-w-2xl mx-auto italic leading-relaxed">
                             "Empowering lives through compassionate care, rehabilitation, and dignity since 1996"
                         </p>
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
+                        {/* CTA Buttons - Mobile-first sizing */}
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2">
                             <Button
                                 size="lg"
-                                className="bg-accent-yellow text-brand-dark hover:bg-brand hover:text-white text-base md:text-lg px-8 py-6 rounded-full transition-all hover:scale-105 font-bold shadow-2xl"
+                                className="w-full sm:w-auto bg-accent-yellow text-brand-dark hover:bg-accent-yellow/90 text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full transition-colors font-bold shadow-xl"
                                 onClick={() => document.getElementById("support")?.scrollIntoView({ behavior: "smooth" })}
                             >
                                 Support Our Mission
@@ -112,21 +116,21 @@ export default function Hero() {
                             <Button
                                 size="lg"
                                 variant="outline"
-                                className="border-2 border-white text-white bg-transparent hover:bg-white/10 text-base md:text-lg px-8 py-6 rounded-full transition-colors font-semibold"
+                                className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white/10 text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full transition-colors font-semibold"
                                 onClick={scrollToAbout}
                             >
                                 Learn More
                             </Button>
                         </div>
 
-                        {/* Scroll Indicator */}
+                        {/* Scroll Indicator - Minimal */}
                         <button
                             onClick={scrollToAbout}
-                            className="inline-flex flex-col items-center gap-2 text-white/60 hover:text-white transition-colors group"
+                            className="inline-flex flex-col items-center gap-1.5 text-white/50 hover:text-white/75 transition-colors pt-4"
                             aria-label="Scroll to content"
                         >
-                            <span className="text-xs md:text-sm font-medium">Discover Our Story</span>
-                            <ArrowDown className="w-4 h-4 animate-bounce" />
+                            <span className="text-xs font-medium">Discover Our Story</span>
+                            <ArrowDown className="w-3.5 h-3.5 opacity-75" strokeWidth={1.5} />
                         </button>
                     </motion.div>
                 </div>

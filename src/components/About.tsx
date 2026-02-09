@@ -12,48 +12,51 @@ const highlights = [
 
 export default function About() {
     return (
-        <section id="about" className="py-16 md:py-20 bg-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-brand-soft/5 rounded-full blur-3xl" />
+        <section id="about" className="section-spacing bg-white relative overflow-hidden">
+            {/* Subtle background pattern */}
+            <div className="absolute top-0 right-0 w-64 h-64 md:w-80 md:h-80 bg-brand-soft/5 rounded-full blur-3xl" />
 
-            <div className="container mx-auto px-4 md:px-6 relative">
+            <div className="container-standard">
                 <div className="max-w-6xl mx-auto">
                     <SectionLabel number="01" label="About Us" className="justify-center" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         {/* Logo and Timeline */}
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-100px" }}
                             variants={fadeInUp}
-                            className="flex flex-col items-center lg:items-start"
+                            className="flex flex-col items-center lg:items-start space-y-6"
                         >
-                            <div className="relative mb-8">
-                                <div className="absolute -inset-4 bg-brand-soft/10 rounded-2xl blur-xl" />
+                            <div className="relative">
+                                <div className="absolute -inset-3 bg-brand-soft/10 rounded-2xl blur-xl" />
                                 <img
                                     src="/logo.png"
                                     alt="KEREMEHAS Logo"
-                                    className="relative h-32 w-auto object-contain"
+                                    className="relative h-24 md:h-28 w-auto object-contain"
                                 />
                             </div>
 
                             {/* Timeline Badge */}
-                            <div className="inline-flex items-center gap-3 bg-accent-yellow/10 border-2 border-accent-yellow/30 rounded-full px-6 py-3 mb-6">
-                                <Calendar className="w-5 h-5 text-brand" />
+                            <div className="inline-flex items-center gap-2 md:gap-3 bg-accent-yellow/10 border-2 border-accent-yellow/30 rounded-full px-4 md:px-5 py-2 md:py-2.5">
+                                <Calendar className="w-4 h-4 md:w-5 md:h-5 text-brand opacity-90" strokeWidth={1.5} />
                                 <div className="text-left">
                                     <p className="text-xs font-semibold text-text-muted uppercase">Since</p>
-                                    <p className="text-2xl font-bold text-brand">1996</p>
+                                    <p className="text-xl md:text-2xl font-bold text-brand">1996</p>
                                 </div>
                             </div>
 
                             {/* Quick Stats */}
-                            <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+                            <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-sm">
                                 {highlights.slice(1).map((item, index) => (
-                                    <div key={index} className="bg-surface p-4 rounded-xl border border-brand-soft/20">
-                                        <item.icon className="w-6 h-6 text-brand mb-2" />
-                                        <p className="text-xs text-text-muted mb-1">{item.label}</p>
-                                        <p className="text-lg font-bold text-brand-dark">{item.value}</p>
+                                    <div
+                                        key={index}
+                                        className="bg-surface p-3 md:p-4 rounded-xl border border-brand-soft/20 text-center hover:border-brand-soft/40 transition-colors"
+                                    >
+                                        <item.icon className="w-5 h-5 md:w-6 md:h-6 mx-auto mb-1.5 text-brand opacity-90" strokeWidth={1.5} />
+                                        <p className="text-xs text-text-muted mb-0.5">{item.label}</p>
+                                        <p className="text-base md:text-lg font-bold text-brand">{item.value}</p>
                                     </div>
                                 ))}
                             </div>
@@ -63,31 +66,47 @@ export default function About() {
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true }}
                             variants={fadeInUp}
-                            className="space-y-6"
+                            className="space-y-4 md:space-y-5"
                         >
-                            <h2 className="text-3xl md:text-4xl font-bold text-brand leading-tight">
+                            <h2 className="text-2xl md:text-3xl font-bold text-brand leading-tight text-balance">
                                 About Keremehas
                             </h2>
 
-                            <div className="space-y-5 text-lg text-text-main leading-relaxed">
+                            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-text-main leading-relaxed">
                                 <p>
-                                    Keremehas is a social service initiative of the <span className="font-semibold text-brand">Church of South India, Coimbatore Diocese</span>, established in 1996 by the Women's Fellowship.
+                                    <strong className="text-brand">KEREMEHAS</strong> is a residential rehabilitation
+                                    centre dedicated to the care, protection, and empowerment of mentally and
+                                    physically challenged adult women.
                                 </p>
+
                                 <p>
-                                    It is a residential rehabilitation centre dedicated to the care, protection,
-                                    and empowerment of mentally and physically challenged adult women.
+                                    Established in <strong>1996</strong> by the Women's Fellowship of the
+                                    Church of South India, Coimbatore Diocese, we provide a safe haven and
+                                    comprehensive support for women who need specialized care.
+                                </p>
+
+                                <p>
+                                    Our facility offers permanent shelter, vocational training, and holistic
+                                    development programs designed to promote independence and dignity.
                                 </p>
                             </div>
 
                             {/* Quote */}
-                            <div className="relative pl-8 py-6 border-l-4 border-accent-red bg-surface/50 rounded-r-xl">
-                                <div className="absolute -left-3 top-4 text-6xl text-accent-red/20 font-serif leading-none">"</div>
-                                <p className="text-xl font-medium text-brand italic leading-relaxed">
-                                    Keremehas works for dignity, inclusion, and holistic development of
-                                    economically and socially underprivileged women.
+                            <div className="border-l-3 border-accent-red pl-4 md:pl-5 py-2 md:py-3 bg-surface/50 rounded-r-lg">
+                                <p className="text-sm md:text-base italic text-text-main leading-relaxed">
+                                    "We strive to extend Christ's love through compassionate service,
+                                    creating a nurturing environment where every woman can thrive."
                                 </p>
+                            </div>
+
+                            {/* Administrator Badge */}
+                            <div className="inline-flex items-center gap-2 bg-brand/5 px-4 py-2 rounded-full">
+                                <Award className="w-4 h-4 text-brand opacity-90" strokeWidth={1.5} />
+                                <span className="text-xs md:text-sm font-semibold text-brand">
+                                    CSI Coimbatore Diocese Initiative
+                                </span>
                             </div>
                         </motion.div>
                     </div>

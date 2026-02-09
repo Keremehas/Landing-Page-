@@ -17,63 +17,54 @@
     /* Shadcn mappings */
     --background: 0 0% 100%;
     --foreground: 210 17% 13%;
-
     --card: 0 0% 100%;
     --card-foreground: 210 17% 13%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 210 17% 13%;
-
     --primary: 202 78% 31%;
-    /* Brand Blue #0F5E8C */
     --primary-foreground: 0 0% 100%;
-
     --secondary: 206 100% 96%;
-    /* Soft surface */
     --secondary-foreground: 202 78% 31%;
-
     --muted: 206 100% 96%;
     --muted-foreground: 220 9% 46%;
-
     --accent: 44 94% 54%;
-    /* Hope Yellow #F6C21C */
     --accent-foreground: 202 63% 16%;
-
     --destructive: 5 78% 55%;
     --destructive-foreground: 0 0% 100%;
-
     --border: 206 50% 90%;
     --input: 206 50% 90%;
     --ring: 202 78% 31%;
-
     --radius: 0.5rem;
+
+    /* Mobile-First Fluid Typography - Tighter ranges for better control */
+    --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+    --text-sm: clamp(0.875rem, 0.84rem + 0.175vw, 0.9375rem);
+    --text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --text-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+    --text-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.5rem);
+    --text-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);
+    --text-5xl: clamp(2.75rem, 2.35rem + 2vw, 3.75rem);
   }
 
   .dark {
     --background: 202 63% 16%;
     --foreground: 0 0% 100%;
-
     --card: 202 63% 16%;
     --card-foreground: 0 0% 100%;
-
     --popover: 202 63% 16%;
     --popover-foreground: 0 0% 100%;
-
     --primary: 0 0% 100%;
     --primary-foreground: 202 63% 16%;
-
     --secondary: 202 50% 20%;
     --secondary-foreground: 0 0% 100%;
-
     --muted: 202 50% 20%;
     --muted-foreground: 220 9% 65%;
-
     --accent: 202 50% 20%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 5 62% 45%;
     --destructive-foreground: 0 0% 100%;
-
     --border: 202 50% 20%;
     --input: 202 50% 20%;
     --ring: 206 100% 80%;
@@ -87,14 +78,45 @@
 
   body {
     @apply bg-white text-text-main antialiased;
-    font-size: 15px;
-    /* Reduced from default 16px */
+    font-size: var(--text-base);
+    line-height: 1.6;
   }
 
-  /* Optimize for mobile */
+  /* Optimize for mobile readability */
   @media (max-width: 768px) {
     body {
-      font-size: 14px;
+      line-height: 1.5;
     }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Mobile-first utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4;
+  }
+
+  .container-standard {
+    @apply max-w-6xl mx-auto px-4 md:px-6;
+  }
+
+  .section-spacing {
+    @apply py-12 md:py-16;
   }
 }
