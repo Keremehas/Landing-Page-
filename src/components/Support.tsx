@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { fadeInUpGentle } from "@/lib/animations";
 import { Button } from "@/components/ui/button";
 
-import { HeartHandshake, DollarSign, Gift, Users, Package, QrCode } from "lucide-react";
+import { HeartHandshake, DollarSign, Gift, Users, QrCode } from "lucide-react";
 
 const contributionMethods = [
     {
@@ -27,11 +27,6 @@ const contributionMethods = [
 
 
 export default function Support() {
-    const upiLink = "upi://pay?pa=csikeremehas633@fbl&pn=CSI%20Keren%20Mehas";
-
-    const handleUPIPayment = () => {
-        window.location.href = upiLink;
-    };
 
     return (
         <section id="support" className="section-spacing bg-white relative overflow-hidden">
