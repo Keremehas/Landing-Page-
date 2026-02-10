@@ -51,7 +51,7 @@ export default function Navbar() {
             )}
         >
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex items-center justify-between h-20">
+                <div className="flex items-center justify-between h-14 md:h-20">
                     {/* Logo: Large, Clear, and Balanced */}
                     <a
                         href="#"
@@ -64,7 +64,7 @@ export default function Navbar() {
                         <img
                             src="/logo.png"
                             alt="KEREMEHAS Logo"
-                            className="h-15 md:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                            className="h-10 md:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                         />
                     </a>
 

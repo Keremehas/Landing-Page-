@@ -62,12 +62,18 @@ export default function Contact() {
                                     <Phone className="w-5 h-5 text-accent-yellow shrink-0" />
                                     <h4 className="text-lg font-semibold text-white">Phone</h4>
                                 </div>
-                                <div className="pl-8">
+                                <div className="pl-8 space-y-2">
                                     <a
-                                        href="tel:0422211837"
-                                        className="text-xl font-bold text-white hover:text-accent-yellow transition-colors"
+                                        href="tel:+919444623803"
+                                        className="block text-xl font-bold text-white hover:text-accent-yellow transition-colors"
                                     >
-                                        0422-211837
+                                        +91 94446 23803
+                                    </a>
+                                    <a
+                                        href="tel:+919361338766"
+                                        className="block text-xl font-bold text-white hover:text-accent-yellow transition-colors"
+                                    >
+                                        +91 93613 38766
                                     </a>
                                 </div>
                             </div>
@@ -80,10 +86,10 @@ export default function Contact() {
                                 </div>
                                 <div className="pl-8">
                                     <a
-                                        href="mailto:keremehascsi@gmail.com"
+                                        href="mailto:csikeremehas96@gmail.com"
                                         className="text-white/90 hover:text-accent-yellow transition-colors"
                                     >
-                                        keremehascsi@gmail.com
+                                        csikeremehas96@gmail.com
                                     </a>
                                 </div>
                             </div>

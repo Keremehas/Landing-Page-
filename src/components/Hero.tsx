@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 export default function Hero() {
     const scrollToAbout = () => {
@@ -122,10 +121,16 @@ export default function Hero() {
                     <div className="space-y-6 md:space-y-8">
                         {/* Diocese Badge */}
                         <motion.div variants={fadeIn}>
-                            <span className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full text-brand text-sm font-medium">
-                                <Heart className="w-4 h-4" />
-                                Church of South India – Coimbatore Diocese
-                            </span>
+                            <div className="inline-flex items-center gap-3 px-5 py-3 bg-white border-2 border-brand/20 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                                <img
+                                    src="/csicdlogo.png"
+                                    alt="CSI Coimbatore Diocese Logo"
+                                    className="w-12 h-12 object-contain"
+                                />
+                                <span className="text-brand text-lg md:text-xl font-bold tracking-wide">
+                                    CSI Coimbatore Diocese
+                                </span>
+                            </div>
                         </motion.div>
 
                         {/* Category */}
@@ -182,51 +187,21 @@ export default function Hero() {
                         </motion.p>
                     </div>
 
-                    {/* Right Panel - Emotional Breathing Space */}
+                    {/* Right Panel - Poster Image */}
                     <motion.div
                         variants={slideInRight}
-                        className="relative hidden lg:block"
+                        className="relative w-full"
                     >
-                        {/* Calm Visual Panel */}
-                        <div className="relative rounded-[32px] overflow-hidden bg-gradient-to-br from-brand-soft/[0.08] to-brand/[0.12] p-16 min-h-[400px] flex items-center justify-center">
+                        {/* Poster Image Container */}
+                        <div className="relative rounded-2xl lg:rounded-[32px] overflow-hidden shadow-xl lg:shadow-2xl">
+                            <img
+                                src="/posterhero.jpeg"
+                                alt="KEREMEHAS - Empowering women with disabilities since 1996"
+                                className="w-full h-auto object-cover"
+                            />
 
-                            {/* Soft Abstract Shapes - Diagonal Flow */}
-                            <div className="absolute inset-0 overflow-hidden">
-                                {/* Large curved shape - top right */}
-                                <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand-soft/[0.06] blur-3xl" />
-
-                                {/* Medium curved shape - bottom left */}
-                                <div className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-brand/[0.08] blur-2xl" />
-                            </div>
-
-                            {/* Soft Glow Behind Icon */}
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-48 h-48 bg-brand/[0.05] rounded-full blur-3xl" />
-                            </div>
-
-                            {/* Content - Icon and Text */}
-                            <div className="relative z-10 text-center space-y-8">
-                                {/* Single Meaningful Icon - Heart */}
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 0.35 }}
-                                    transition={{
-                                        duration: 2,
-                                        ease: [0.4, 0, 0.2, 1] as const,
-                                        repeat: Infinity,
-                                        repeatType: "reverse" as const,
-                                        repeatDelay: 2
-                                    }}
-                                    className="flex justify-center"
-                                >
-                                    <Heart className="w-16 h-16 text-brand" strokeWidth={1.5} />
-                                </motion.div>
-
-                                {/* Single Line of Text - Emotional Checksum */}
-                                <p className="text-brand/60 text-sm font-medium tracking-[0.2em] uppercase">
-                                    Care • Safety • Dignity
-                                </p>
-                            </div>
+                            {/* Subtle overlay for better text contrast if needed */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/10 to-transparent pointer-events-none" />
                         </div>
                     </motion.div>
                 </motion.div>

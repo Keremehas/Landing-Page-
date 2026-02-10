@@ -40,7 +40,8 @@ export default function Footer() {
                             <p>1077, Avinashi Road</p>
                             <p>Coimbatore – 641 018</p>
                             <p>Tamil Nadu, India</p>
-                            <p className="mt-2">Tel: 0422-211837</p>
+                            <p className="mt-2">Tel: +91 94446 23803</p>
+                            <p>Tel: +91 93613 38766</p>
                         </div>
                     </div>
                 </div>
@@ -51,9 +52,28 @@ export default function Footer() {
                         &copy; {new Date().getFullYear()} KEREMEHAS - CSI Ann's Centre. All rights reserved.
                     </p>
 
-                    <div className="flex space-x-6 text-sm text-white/70">
-                        <a href="#" className="hover:text-accent-yellow transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-accent-yellow transition-colors">Terms of Service</a>
+                    <div className="flex items-center gap-6">
+                        <div className="flex space-x-6 text-sm text-white/70">
+                            <a href="#" className="hover:text-accent-yellow transition-colors">Privacy Policy</a>
+                            <a href="#" className="hover:text-accent-yellow transition-colors">Terms of Service</a>
+                        </div>
+
+                        {/* Go to Top Button */}
+                        <button
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            className="group flex items-center gap-2 px-4 py-2 bg-accent-yellow/10 hover:bg-accent-yellow text-white/70 hover:text-brand-dark border border-accent-yellow/30 hover:border-accent-yellow rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                            aria-label="Go to top"
+                        >
+                            <svg
+                                className="w-4 h-4 transition-transform group-hover:-translate-y-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                            </svg>
+                            <span className="text-sm font-semibold">Top</span>
+                        </button>
                     </div>
                 </div>
             </div>
