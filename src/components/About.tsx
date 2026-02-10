@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
-import SectionLabel from "@/components/ui/SectionLabel";
+
 import { Users, Heart, Award, Calendar } from "lucide-react";
 
 const highlights = [
@@ -18,7 +18,7 @@ export default function About() {
 
             <div className="container-standard">
                 <div className="max-w-6xl mx-auto">
-                    <SectionLabel number="01" label="About Us" className="justify-center" />
+
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                         {/* Logo and Timeline */}

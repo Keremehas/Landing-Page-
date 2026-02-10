@@ -63,6 +63,9 @@ module.exports = {
         "text-main": "#1F2933",     // Primary text
         "text-muted": "#6B7280",    // Muted text
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

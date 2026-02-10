@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
-import SectionLabel from "@/components/ui/SectionLabel";
+
 import { GraduationCap, Users2, HeartHandshake, Check } from "lucide-react";
 
 const categories = [
@@ -10,7 +10,8 @@ const categories = [
         color: "from-brand to-brand-soft",
         programs: [
             "Vocational training to build confidence and earning capacity",
-            "Skill development programs tailored to individual abilities"
+            "Skill development programs tailored to individual abilities",
+            "Guided hands-on practical learning"
         ]
     },
     {
@@ -26,7 +27,7 @@ const categories = [
     {
         title: "Holistic Development",
         icon: HeartHandshake,
-        color: "from-accent-yellow to-accent-red",
+        color: "from-brand to-brand-soft",
         programs: [
             "Programmes to improve coordination, ability and flexibility",
             "Guiding parents and caregivers",
@@ -42,7 +43,7 @@ export default function Rehabilitation() {
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent-yellow/5 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-4 md:px-6 relative">
-                <SectionLabel number="06" label="Rehabilitation" className="justify-center" />
+
 
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">
@@ -93,8 +94,8 @@ export default function Rehabilitation() {
                                     {category.programs.map((program, progIndex) => (
                                         <div key={progIndex} className="flex items-start gap-3 group/item">
                                             <div className="shrink-0 mt-1">
-                                                <div className="bg-accent-red/10 p-1.5 rounded-full">
-                                                    <Check className="w-4 h-4 text-accent-red" />
+                                                <div className="bg-brand/10 p-1.5 rounded-full">
+                                                    <Check className="w-4 h-4 text-brand" />
                                                 </div>
                                             </div>
                                             <p className="text-text-main leading-relaxed group-hover/item:text-brand transition-colors">
@@ -130,7 +131,7 @@ export default function Rehabilitation() {
                 >
                     <div className="inline-block bg-white px-8 py-4 rounded-full shadow-lg border-2 border-brand-soft/30">
                         <p className="text-brand font-semibold">
-                            <span className="text-accent-red">♥</span> Transforming lives through comprehensive care and support
+                            <span className="text-brand">♥</span> Transforming lives through comprehensive care and support
                         </p>
                     </div>
                 </motion.div>

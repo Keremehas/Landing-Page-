@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import SectionLabel from "@/components/ui/SectionLabel";
+
 import { Home, GraduationCap, TrendingUp, Sparkles } from "lucide-react";
 
 const missions = [
@@ -25,7 +25,7 @@ const missions = [
         icon: Sparkles,
         title: "Compassionate Care",
         description: "Extending Christ's love through dedicated service and support",
-        color: "from-accent-red to-brand",
+        color: "from-brand to-brand-soft",
     },
 ];
 
@@ -36,7 +36,7 @@ export default function Mission() {
             <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-accent-yellow/5 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-4 md:px-6 relative">
-                <SectionLabel number="03" label="Our Mission" className="justify-center" />
+
 
                 <div className="text-center mb-10 md:mb-12 lg:mb-16">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand mb-3 md:mb-4">Our Mission</h2>

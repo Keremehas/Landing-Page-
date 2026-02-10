@@ -47,24 +47,24 @@ export default function Navbar() {
         <nav
             ref={navRef}
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-brand-soft/20 transition-all duration-300"
+                "fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl shadow-sm border-b border-white/20 transition-all duration-300"
             )}
         >
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex items-center justify-between h-20">
-                    {/* Logo */}
+                    {/* Logo: Large, Clear, and Balanced */}
                     <a
                         href="#"
                         onClick={(e) => {
                             e.preventDefault();
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
-                        className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+                        className="relative flex items-center hover:opacity-90 transition-all duration-300 group"
                     >
                         <img
                             src="/logo.png"
                             alt="KEREMEHAS Logo"
-                            className="h-14 w-auto object-contain"
+                            className="h-15 md:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                         />
                     </a>
 
@@ -78,14 +78,16 @@ export default function Navbar() {
                                     e.preventDefault();
                                     scrollToSection(link.href);
                                 }}
-                                className="text-sm font-medium text-text-muted hover:text-brand transition-colors"
+                                className="relative text-sm font-medium text-text-muted hover:text-brand transition-colors group"
                             >
                                 {link.name}
+                                {/* Animated Underline */}
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand to-accent-yellow group-hover:w-full transition-all duration-300 ease-out" />
                             </a>
                         ))}
                         <Button
                             onClick={() => scrollToSection("#support")}
-                            className="bg-accent-yellow text-brand-dark hover:bg-brand hover:text-white rounded-full px-6 font-semibold transition-all"
+                            className="bg-accent-yellow text-brand-dark hover:bg-brand hover:text-white rounded-full px-6 py-2 font-semibold transition-all text-sm"
                         >
                             Support Us
                         </Button>
@@ -104,7 +106,7 @@ export default function Navbar() {
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden bg-white border-b border-brand-soft/20 absolute w-full shadow-lg">
+                <div className="md:hidden bg-white/80 backdrop-blur-xl border-b border-white/20 absolute w-full shadow-lg">
                     <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
                         {navLinks.map((link) => (
                             <a

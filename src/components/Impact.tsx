@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeInUpGentle } from "@/lib/animations";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import SectionLabel from "@/components/ui/SectionLabel";
+
 import { Users, Heart, Award, TrendingUp, Home, Sparkles } from "lucide-react";
 
 const stats = [
@@ -16,8 +16,8 @@ const stats = [
         icon: Heart,
         value: "100%",
         label: "Holistic Care",
-        description: "Catering to various physical and mental challenges",
-        color: "text-accent-red"
+        description: "Catering to various physical and mental challenges with a focus on dignity and respect",
+        color: "text-brand"
     },
     {
         icon: Award,
@@ -59,7 +59,7 @@ export default function Impact() {
             </div>
 
             <div className="container mx-auto px-4 md:px-6 relative">
-                <SectionLabel number="05" label="Our Impact" className="justify-center" />
+
 
                 <div className="text-center mb-10 md:mb-12 lg:mb-16">
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand mb-3 md:mb-4">Our Impact</h2>

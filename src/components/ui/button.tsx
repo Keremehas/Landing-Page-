@@ -8,12 +8,18 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                default: "bg-primary text-primary-foreground hover:bg-primary/90",
-                destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-                outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-                secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-                ghost: "hover:bg-accent hover:text-accent-foreground",
-                link: "text-primary underline-offset-4 hover:underline",
+                // Primary CTA: Hope Yellow background with Deep Navy text
+                default: "bg-accent-yellow text-brand-dark hover:bg-brand hover:text-white font-semibold shadow-sm",
+                // Secondary: Brand outline with soft hover
+                secondary: "border-2 border-brand text-brand bg-transparent hover:bg-brand-soft hover:text-brand-dark font-semibold",
+                // Destructive: Compassion Red (limited use)
+                destructive: "bg-accent-red text-white hover:bg-accent-red/90",
+                // Outline: Neutral outline
+                outline: "border border-brand-soft bg-background hover:bg-surface hover:text-brand",
+                // Ghost: Minimal
+                ghost: "hover:bg-surface hover:text-brand",
+                // Link: Brand colored link
+                link: "text-brand underline-offset-4 hover:underline",
             },
             size: {
                 default: "h-10 px-4 py-2",

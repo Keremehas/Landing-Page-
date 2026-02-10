@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
-import SectionLabel from "@/components/ui/SectionLabel";
+
 import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Contact() {
@@ -13,7 +13,7 @@ export default function Contact() {
             </div>
 
             <div className="container mx-auto px-4 md:px-6 relative">
-                <SectionLabel number="08" label="Contact Us" className="justify-center" />
+
 
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>

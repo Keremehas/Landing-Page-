@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { staggerContainer, slideInLeft } from "@/lib/animations";
-import SectionLabel from "@/components/ui/SectionLabel";
+
 import { Target, CheckCircle2 } from "lucide-react";
 
 const objectives = [
@@ -17,7 +17,7 @@ export default function Objectives() {
             <div className="absolute top-0 left-0 w-96 h-96 bg-brand-soft/5 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-4 md:px-6 relative">
-                <SectionLabel number="04" label="Aims & Objectives" className="justify-center" />
+
 
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">
@@ -56,7 +56,7 @@ export default function Objectives() {
                             </div>
 
                             {/* Content Card */}
-                            <div className="flex-1 bg-white p-6 md:p-8 rounded-xl shadow-md border-l-4 border-accent-red hover:shadow-xl transition-all group">
+                            <div className="flex-1 bg-white p-6 md:p-8 rounded-xl shadow-md border-l-4 border-brand hover:shadow-xl transition-all group">
                                 <div className="flex items-start gap-4">
                                     <div className="bg-brand/10 p-3 rounded-full shrink-0 group-hover:bg-brand/20 transition-colors">
                                         <Target className="w-6 h-6 text-brand" />
@@ -66,7 +66,7 @@ export default function Objectives() {
                                             {item}
                                         </p>
                                     </div>
-                                    <CheckCircle2 className="w-6 h-6 text-accent-red shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <CheckCircle2 className="w-6 h-6 text-brand shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                             </div>
                         </motion.div>
